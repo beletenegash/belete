@@ -1,0 +1,2 @@
+belete
+*node_mudules/*
