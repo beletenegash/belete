@@ -5,12 +5,20 @@ import Games from './Games/Games';
 
 
 class App extends React.Component {
-  render() {
+  
+    constructor(){
+      super();
+      this.state ={const: 10}
+    }
+    render() {
   
     
     return(
       <div>
-      
+        <p>{this.state.const}</p>
+<button onClick={()=>{
+  this.setState({const:this.state.const -10})
+}}>+</button>      
     
     <h4 className ="pic"><Logo /></h4>
     <h1 className="matchday">match day</h1>
