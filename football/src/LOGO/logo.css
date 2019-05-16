@@ -1,38 +1,28 @@
-.pic{
-    width:100%;
-    background: grey;
-    height: 100px;
-    color: aliceblue;
-    font-size: 40px;
 
-
-}
-.matchday{
-    text-align: center;
-}
 
 button{
 /* position: fixed; */
-    background-color: #8b008b;
+    background-color: grey;
     border: none;
     color: white;
-    padding: 15px 32px;
+    /* padding: 15px 32px; */
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
     margin: 10px;
     cursor: pointer;
+    float: right;
   
 }
-.button{
-    position: fixed;
-    bottom: 0px;
-    width: 100%;
-    display: flex;
-    
-}
 
-.button>button{
-    flex:1
+.wrapper{
+    position: absolute;
+    top: 0px;
+    background-color: grey;
+    width: 100%;
+}
+.pic{
+    color: aliceblue;
+    font-size: 32;
 }

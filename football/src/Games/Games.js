@@ -6,8 +6,9 @@ class Games extends React.Component {
     
       
       return(
-          <div className="games">
-        Arsenal vs Manchster united
+          <div >
+          <button className="buynew" >buy now</button>
+      
           </div>
 
       )
