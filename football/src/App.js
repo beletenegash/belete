@@ -1,28 +1,33 @@
 import React from 'react';
-import Logo from './LOGO/logo';
+import TopMenu from './TopMenu/TopMenu';
 import Games from './Games/Games';
+import SignIn from './Sigin/sigin';
+import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
+
+import './App.css'
 
 
 
-
-class App extends React.Component {
-
-
-  render() {
+function App() {
 
 
-    return (
+  return (
+    <Router>
       <div className="page">
-        <Logo />
-        <Games />
+      
+        <TopMenu />
+        <div className='wrapperRouter'>
+          <Route exact={true} path='/sigin' component={SignIn} />
+          <Route exact={true} path='/games' component={Games} />
+          
+        </div>
       </div>
 
-
-    )
-  }
-
-
+    </Router>
+  )
 }
+
+
 
 
 
