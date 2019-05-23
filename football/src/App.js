@@ -19,6 +19,8 @@ function App() {
         <div className='wrapperRouter'>
           <Route exact={true} path='/sigin' component={SignIn} />
           <Route exact={true} path='/games' component={Games} />
+   
+          
           
         </div>
       </div>

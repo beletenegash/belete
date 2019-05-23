@@ -10,19 +10,22 @@ class Logo extends React.Component {
 
     return (
       <div className="wrapper" >
-        <div> <img className="cart" src="https://img.icons8.com/metro/26/000000/add-shopping-cart.png"></img>cart</div>
-        <button>orders</button>
+        <div> <img className="cart" src="https://img.icons8.com/metro/26/000000/add-shopping-cart.png"></img></div>
 <div className="heder">
-        <div> <Link to={`/sigin`}>
+        <div className="click"> <Link to={`/sigin`}>
           login
     </Link></div>
-        <div>
+        <div  className="click" >
           <Link to={`/games`}>
            buynow
               </Link>
           
+        </div >
+        <div  className="click">
+    
+        home 
+
         </div>
-        <div>home</div>
 
         <h1 className="pic">Shmerling</h1>
         </div>

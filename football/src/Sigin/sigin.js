@@ -13,7 +13,7 @@ function SignIn (props) {
     }
 
     return (
-        <div className="login">
+        <div className="useres">
             <form onSubmit={kos}>
                 <input type="text" placeholder="email" onChange ={(e) => setEmail(e.target.value)}/><br />
                 <input type="text" placeholder="password" onChange ={(e) => setPassword(e.target.value)}/><br />

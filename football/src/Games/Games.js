@@ -8,7 +8,9 @@ class Games extends React.Component {
       return(
           <div >
           <button className="buynew" >buy now</button>
-      
+          
+ <h1 className="pix"> this item ship to 
+ israel get it buy </h1>
           </div>
 
       )
