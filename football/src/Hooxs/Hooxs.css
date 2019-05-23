@@ -1,0 +1,11 @@
+.pic{
+    position: relative;
+    display: flex;
+    display: block;
+    top: 50px;
+ 
+}
+.wards{
+    position: relative;
+    float: left;
+}

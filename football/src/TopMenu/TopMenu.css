@@ -22,7 +22,7 @@ wra{
     background-color: grey;
     width: 100%;
 }
-.pic{
+.hader{
     color: aliceblue;
     font-size: 32;
 }
@@ -43,6 +43,7 @@ input[type="text"] {
     height: 100%;
     color:bisque;
     left: 800px;
+    bottom: 800px;
 
 }
 input[type="submit"]{
@@ -51,6 +52,7 @@ input[type="submit"]{
 color:whitesmoke;
 width: 50px;
  left: 800px;
+ bottom: 800px;
 }
 .cart{color: aliceblue;
 float: right;

@@ -4,10 +4,12 @@
     position: relative;
     background: gold;
     left: 1000px;
+    bottom: 800px;
     
 }
 .pix{
     position: relative;
     left: 800px;
     bottom: 100px;
+    bottom: 900px;
 }
