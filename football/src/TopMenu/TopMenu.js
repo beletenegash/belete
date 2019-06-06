@@ -25,6 +25,12 @@ class Logo extends React.Component {
           <Link to={`/Hooxs`}>
            Home
               </Link>
+
+        </div>
+        <div className='pic'>
+        <link to ={`/pic`}>
+        </link>
+        
         </div>
 
         <h1 className="hader">Shmerling</h1>
