@@ -23,15 +23,11 @@ class Logo extends React.Component {
         </div >
         <div  className="click" >
           <Link to={`/Hooxs`}>
-           Home
+           product
               </Link>
 
         </div>
-        <div className='pic'>
-        <link to ={`/pic`}>
-        </link>
-        
-        </div>
+       
 
         <h1 className="hader">Shmerling</h1>
         </div>

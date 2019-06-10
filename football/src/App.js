@@ -3,8 +3,7 @@ import TopMenu from './TopMenu/TopMenu';
 import Games from './Games/Games';
 import SignIn from './Sigin/sigin';
 import Hooxs from './Hooxs/Hooxs';
-import pic from './pic1/pic';
-import pic2 from './pic2/pic2'
+
 
 
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
@@ -26,9 +25,8 @@ function App() {
         <div className='wrapperRouter'>
           <Route exact={true} path='/sigin' component={SignIn} />
           <Route exact={true} path='/games' component={Games} />
-          <Route path='/hooks' component={Hooxs} />        
-          <Route exact={true} path='/pic' component={pic2} /> 
-          <Route exact={true} path='/pic2' component={pic} />
+          <Route exact={true} path='/hooks' component={Hooxs} />        
+      
         </div>
   
       </div>
