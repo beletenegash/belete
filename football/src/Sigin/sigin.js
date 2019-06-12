@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './sigin.css'
+import { METHODS } from 'http';
 
 
 function SignIn (props) {
@@ -9,7 +10,25 @@ function SignIn (props) {
 
     const kos = (e) => {
         e.preventDefault();
-        alert(`${email},${password}`)
+      
+
+        let userdata={email, password}
+        fetch("http://localhost:4000/login",{
+            method:"post",
+            body:JSON.stringify(userdata),
+            headers:{
+                'content-type':'application/json'
+            }
+        }).then(res => res .json().then(res =>{
+if(res.ok){
+    props.history.push("/games")
+    
+}
+else(alert("user or passworde is not corect"))
+
+
+        }))
+        .catch(error =>console.error('error',error))
     }
 
     return (

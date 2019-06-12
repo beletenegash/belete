@@ -7,10 +7,24 @@ class Games extends React.Component {
       
       return(
           <div >
-          <button className="buynew" >buy now</button>
+
           
- <h1 className="pix"> this item ship to 
- israel get it buy </h1>
+ <h1 className="pix"> 
+ כתובת פרטים
+  למשלוח כתובת </h1>
+  <div className="adress">
+ <form> 
+  <p> <input type="text" placeholder="fullname"></input>full Name</p>
+  <p> <input type="text" placeholder="adress"></input>Adress</p>
+  <p> <input type="text" placeholder="city"></input>City</p>
+  <p> <input type="text" placeholder="countery"></input>Countery</p>
+  <p> <input type="phone" placeholder="phonenumber"></input>Phone Number</p>
+ <input type="submit" value="send"></input>
+  
+ 
+ </form>
+ </div>
+ 
           </div>
 
       )
