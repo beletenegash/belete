@@ -34,10 +34,23 @@ firestlogin.save(function(err){
     console.log('saved')
 })
 app.post("/login",(req,res)=>{
-
-console.log('aobed')
-const{emil,password}=req.body;
+const{email,password}=req.body;
 console.log(email,password, "obed")
+LoginModel.findOne({ email }, function (err, result) {
+    if(result === null){
+        res.send({failed:'user not found'})
+        console.log('user not found')
+    }
+    if(result !== null){
+        if(result.password === password){
+            res.send({success:'logged'})
+            console.log(result)
+        }
+    }
+    if(err){
+        console.error(err)
+    }
+});
 })
 
 
