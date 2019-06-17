@@ -1,28 +1,24 @@
 import React from 'react';
-import {  Link } from 'react-router-dom';
-import './TopMenu.css'
+import {Link} from 'react-router-dom';
+import './header.css'
 
-class Logo extends React.Component {
-  componentDidMount() {
-    console.log("ddmount")
-  }
-  render() {
+function header(){
 
     return (
       <div className="wrapper" >
         <div> <img className="cart" src="https://img.icons8.com/metro/26/000000/add-shopping-cart.png"></img></div>
-<div className="heder">
-        <div className="click"> <Link to={`/sigin`}>
+<div className="heders">
+        <div className="click"> <Link to={`/login`}>
           login
     </Link></div>
         <div  className="click" >
-          <Link to={`/games`}>
+          <Link to={`/order`}>
            buynow
               </Link>
           
         </div >
         <div  className="click" >
-          <Link to={`/Hooxs`}>
+          <Link to={`/home`}>
            product
               </Link>
 
@@ -36,7 +32,7 @@ class Logo extends React.Component {
 
     )
   }
-}
 
 
-export default Logo
+
+export default header

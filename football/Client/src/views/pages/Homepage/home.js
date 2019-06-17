@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import './Hooxs.css'
+import './home.css'
 
-function Hooxs() {
+function Home() {
   const [text, setText] = useState('');
     let tempText = '';
 
@@ -20,4 +20,4 @@ function Hooxs() {
     </div>
   );
 }
-export default Hooxs;
+export default Home;

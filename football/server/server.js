@@ -33,6 +33,21 @@ var firestlogin = new LoginModel ({email:"belete",password:"1234"})
 firestlogin.save(function(err){
     console.log('saved')
 })
+
+
+
+const OrderSchema = new Schema({
+    fullname:String,
+    adress: String,
+    city: String,
+    country: String,
+    phone: String
+})
+const OrderModel = mongoose.model("order",OrderSchema)
+
+
+
+
 app.post("/login",(req,res)=>{
 const{email,password}=req.body;
 console.log(email,password, "obed")
@@ -52,10 +67,18 @@ LoginModel.findOne({ email }, function (err, result) {
     }
 });
 })
+app.post("/orderpage",(req,res)=>{
+    console.log(req.body.inputs)
+const{fullname,adress,city,countery,phonenumber}=req.body.inputs;
+var orderSave = new OrderModel ({fullname:fullname,adress:adress,city:city,country:countery,phone:phonenumber})
+orderSave.save(function(err){
+    if(err){
+        console.error(err)
+    }
+    console.log('saved')
+})
 
 
+})
 
-app.listen(port,()=>{(
-    console.log('data work')
-
-)})
+app.listen(port, () => console.log(`Example app listening on port ${port}!`))

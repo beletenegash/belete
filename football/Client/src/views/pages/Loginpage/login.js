@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import './sigin.css'
-import { METHODS } from 'http';
+import './login.css'
 
 
-function SignIn(props) {
+
+function Login(props) {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -23,7 +23,7 @@ function SignIn(props) {
             console.log(res)
             if (res.success) {
                 console.log('good logged')
-                props.history.push("/games")
+                props.history.push("/Order")
             }
             if(res.failed){
                 console.log('not logged')
@@ -47,4 +47,4 @@ function SignIn(props) {
 }
 
 
-export default SignIn;
+export default Login;
