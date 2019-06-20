@@ -12,6 +12,7 @@ function Order(props) {
         e.preventDefault();
 
         let inputdata={inputs}
+
         console.log(inputdata)
         fetch("http://localhost:4000/orderpage", {
             method: "post",
@@ -21,16 +22,17 @@ function Order(props) {
             }
         }).then(res => res.json().then(res => {
             console.log(res)
-            // if (res.success) {
-            //     console.log('good logged')
-            //     props.history.push("/product")
-            // }
-            // if(res.failed){
-            //     console.log('not logged')
-            // }
+            if (res.success) {
+                console.log('good logged')
+                props.history.push("/Card")
+            }
+            if(res.failed){
+                console.log('not logged')
+            }
 
         }))
             .catch(error => console.error('error', error))
+
     }
 
     
@@ -40,8 +42,8 @@ function Order(props) {
             <div>
                 <form className="adrs" onSubmit={orders}>
                     <h1 >
-                        ����� �����
-  ������ ����� </h1>
+                        הכנס כתובת מגורים למשלוח
+      </h1>
                     <p> <input type="text" placeholder="fullname" onKeyUp={(e)=>{setInput({...inputs,fullname:e.target.value })}}></input>full Name</p>
                     <p> <input type="text" placeholder="adress" onKeyUp={(e)=>{setInput({...inputs,adress:e.target.value })}}></input>Adress</p>
                     <p> <input type="text" placeholder="city" onKeyUp={(e)=>{setInput({...inputs,city:e.target.value })}}></input>City</p>
@@ -50,15 +52,7 @@ function Order(props) {
                     <input type="submit" value="send"></input>
                 </form>
             </div>
-            <div>
-                <form  className="cardes">
-                    <h1>����� �� ����� �����</h1>
-                    <p> <input type="text" placeholder="nameoncarde" onKeyUp={(e)=>{setInput({...inputs,nameoncarde:e.target.value })}}></input>name on carde</p>
-                    <p> <input type="number" placeholder="numberoncarde" onKeyUp={(e)=>{setInput({...inputs,numberoncar:e.target.value })}}></input>number on carde</p>
-                    <p> <input type="date" placeholder="date"></input>date</p>
-                    <input type="submit" value="send"></input>
-                </form>
-            </div>
+         
 
         </div>
     )

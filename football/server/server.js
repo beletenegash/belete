@@ -45,18 +45,24 @@ const OrderSchema = new Schema({
 })
 const OrderModel = mongoose.model("order",OrderSchema)
 
-
+const cardeSchema = new Schema({
+    nameoncarde:String,
+    nemberoncarde: String,
+    date: String,
+  
+})
+const CardeModel = mongoose.model("carde",cardeSchema)
 
 
 app.post("/login",(req,res)=>{
 const{email,password}=req.body;
 console.log(email,password, "obed")
 LoginModel.findOne({ email }, function (err, result) {
-    if(result === null){
+    if(result == null){
         res.send({failed:'user not found'})
         console.log('user not found')
     }
-    if(result !== null){
+    if(result != null){
         if(result.password === password){
             res.send({success:'logged'})
             console.log(result)
@@ -67,6 +73,7 @@ LoginModel.findOne({ email }, function (err, result) {
     }
 });
 })
+
 app.post("/orderpage",(req,res)=>{
     console.log(req.body.inputs)
 const{fullname,adress,city,countery,phonenumber}=req.body.inputs;
@@ -75,7 +82,22 @@ orderSave.save(function(err){
     if(err){
         console.error(err)
     }
+    res.send({success:true})
     console.log('saved')
+})
+
+
+})
+app.post("/cardpage",(req,res)=>{
+    console.log(req.body.inputs)
+const{nameoncarde,numbercarde,date}=req.body.inputs;
+var cardeSave = new  CardeModel ({nameoncarde:nameoncarde,numbercarde:numbercarde,date:date,})
+cardeSave.save(function(err){
+    if(err){
+        console.error(err)
+    }
+    res.send({success:true})
+    console.log('its good')
 })
 
 

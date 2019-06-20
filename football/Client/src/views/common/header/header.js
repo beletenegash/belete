@@ -23,6 +23,12 @@ function header(){
               </Link>
 
         </div>
+        <div  className="click" >
+          <Link to={`/card`}>
+          
+              </Link>
+
+        </div>
        
 
         <h1 className="hader">Shmerling</h1>

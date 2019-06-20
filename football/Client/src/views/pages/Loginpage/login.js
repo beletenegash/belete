@@ -23,7 +23,7 @@ function Login(props) {
             console.log(res)
             if (res.success) {
                 console.log('good logged')
-                props.history.push("/Order")
+                props.history.push("/home")
             }
             if(res.failed){
                 console.log('not logged')
