@@ -1,17 +1,17 @@
-import React ,{useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import './order.css'
 
 function Order(props) {
 
     const [inputs, setInput] = useState({})
 
-    useEffect(()=>{ console.dir(inputs)})
+    useEffect(() => { console.dir(inputs) })
 
 
     const orders = (e) => {
         e.preventDefault();
 
-        let inputdata={inputs}
+        let inputdata = { inputs }
 
         console.log(inputdata)
         fetch("http://localhost:4000/orderpage", {
@@ -26,7 +26,7 @@ function Order(props) {
                 console.log('good logged')
                 props.history.push("/Card")
             }
-            if(res.failed){
+            if (res.failed) {
                 console.log('not logged')
             }
 
@@ -35,25 +35,20 @@ function Order(props) {
 
     }
 
-    
+
 
     return (
-        <div  >
-            <div>
-                <form className="adrs" onSubmit={orders}>
-                    <h1 >
-                        הכנס כתובת מגורים למשלוח
-      </h1>
-                    <p> <input type="text" placeholder="fullname" onKeyUp={(e)=>{setInput({...inputs,fullname:e.target.value })}}></input>full Name</p>
-                    <p> <input type="text" placeholder="adress" onKeyUp={(e)=>{setInput({...inputs,adress:e.target.value })}}></input>Adress</p>
-                    <p> <input type="text" placeholder="city" onKeyUp={(e)=>{setInput({...inputs,city:e.target.value })}}></input>City</p>
-                    <p> <input type="text" placeholder="countery" onKeyUp={(e)=>{setInput({...inputs,countery:e.target.value })}}></input>Countery</p>
-                    <p> <input type="text" placeholder="phonenumber" onKeyUp={(e)=>{setInput({...inputs,phonenumber:e.target.value })}}></input>Phone Number</p>
-                    <input type="submit" value="send"></input>
-                </form>
-            </div>
-         
 
+        <div>
+            <form className="orders" onSubmit={orders}>
+                <h1 >Enter Your Adress</h1>
+                <p> <input type="text" placeholder="fullname" onKeyUp={(e) => { setInput({ ...inputs, fullname: e.target.value }) }}></input>full Name</p>
+                <p> <input type="text" placeholder="adress" onKeyUp={(e) => { setInput({ ...inputs, adress: e.target.value }) }}></input>Adress</p>
+                <p> <input type="text" placeholder="city" onKeyUp={(e) => { setInput({ ...inputs, city: e.target.value }) }}></input>City</p>
+                <p> <input type="text" placeholder="countery" onKeyUp={(e) => { setInput({ ...inputs, countery: e.target.value }) }}></input>Countery</p>
+                <p> <input type="text" placeholder="phonenumber" onKeyUp={(e) => { setInput({ ...inputs, phonenumber: e.target.value }) }}></input>Phone Number</p>
+                <input type="submit" value="send"></input>
+            </form>
         </div>
     )
 }

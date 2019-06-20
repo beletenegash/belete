@@ -36,7 +36,7 @@ function Login(props) {
     return (
 
         <div className="useres">
-            <form onSubmit={kos}>
+            <form className='usercss' onSubmit={kos}>
                 <input type="text" placeholder="email" onChange={(e) => setEmail(e.target.value)} /><br />
                 <input type="text" placeholder="password" onChange={(e) => setPassword(e.target.value)} /><br />
                 <input type="submit" value="login" /><br />

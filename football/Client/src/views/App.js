@@ -19,17 +19,14 @@ function App() {
 
   return (
     <Router>
-      <div className="page">
-        <Home/>
+      <div className="page">       
         <Header/>
-        <div className='wrapperRouter'>
+        <div className='pageWrapper'>
           <Route exact={true} path='/Login' component={login} />
           <Route exact={true} path='/Order' component={Order} />
           <Route exact={true} path='/Card' component={Card} /> 
-                 
-      
-        </div>
-  
+          <Route exact={true} path='/home' component={Home} /> 
+        </div>  
       </div>
 
     </Router>

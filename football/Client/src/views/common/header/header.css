@@ -1,8 +1,9 @@
 
 
-.wrapper{
-    position: absolute;
+.header{
+    position: fixed;
     top: 0px;
+    left:0px;
     background-color: grey;
     width: 100%;
 }

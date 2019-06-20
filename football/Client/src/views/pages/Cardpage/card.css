@@ -1,5 +1,4 @@
 .card{
-    position: relative;
-    bottom: 500px;
-    left: 400px;
+  
+    border-radius: 100px;
 }

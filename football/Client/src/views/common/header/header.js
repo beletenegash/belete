@@ -5,7 +5,7 @@ import './header.css'
 function header(){
 
     return (
-      <div className="wrapper" >
+      <div className="header" >
         <div> <img className="cart" src="https://img.icons8.com/metro/26/000000/add-shopping-cart.png"></img></div>
 <div className="heders">
         <div className="click"> <Link to={`/login`}>
