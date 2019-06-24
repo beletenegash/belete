@@ -5,6 +5,7 @@ import Order from './pages/Orderpage/order';
 import login from './pages/Loginpage/login';
 import Home from './pages/Homepage/home';
 import Card from './pages/Cardpage/card'
+import Sing from './pages/Singpage/sing'
 
 
 import { BrowserRouter as Router, Route } from 'react-router-dom';
@@ -26,6 +27,9 @@ function App() {
           <Route exact={true} path='/Order' component={Order} />
           <Route exact={true} path='/Card' component={Card} /> 
           <Route exact={true} path='/home' component={Home} /> 
+          <Route exact={true} path='/sing' component={Sing} /> 
+          
+          
         </div>  
       </div>
 

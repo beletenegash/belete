@@ -17,4 +17,18 @@
     bottom: 100px;
     bottom: 900px;
 }
+.orders{
+background: rgb(235, 233, 225);
+text-align: center;
+width: 500px;
+height: 500px;
+border-radius: 20px;
+
+
+}
+.orde{
+    margin: 0px;
+position: absolute;
+left: 100px
+}
 

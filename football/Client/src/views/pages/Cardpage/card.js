@@ -44,10 +44,10 @@ return(
     <div>
     <form  className="card" onSubmit={cardes}>
         <h1>  הכנס פרטי האשראי לתשלום</h1>
-        <p> <input type="text" placeholder="nameoncarde" onKeyUp={(e)=>{setInput({...inputs,nameoncarde:e.target.value })}}></input>name on carde</p>
-        <p> <input type="text" placeholder="numberoncarde" onKeyUp={(e)=>{setInput({...inputs,numberoncar:e.target.value })}}></input>number on carde</p>
-        <p> <input type="date" placeholder="date" onKeyUp={(e)=>{setInput({...inputs,date:e.target.value })}}></input>date</p>
-        <input type="submit" value="send"></input>
+        <p> <input type="text" className="car" placeholder="nameoncarde" onKeyUp={(e)=>{setInput({...inputs,nameoncarde:e.target.value })}}></input>name on carde</p>
+        <p> <input type="text" className="car" placeholder="numberoncarde" onKeyUp={(e)=>{setInput({...inputs,numberoncar:e.target.value })}}></input>number on carde</p>
+        <p> <input type="date" className="car" placeholder="date" onKeyUp={(e)=>{setInput({...inputs,date:e.target.value })}}></input>date</p>
+        <input type="submit" value="send" className="car"></input>
     </form>
 </div>
 

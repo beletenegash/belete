@@ -1,4 +1,12 @@
 .card{
-  
-    border-radius: 100px;
+  background: rgb(238, 237, 229);
+    border-radius: 10px;
+    text-align: center;
+    width: 500px;
+    height: 500px;
+}
+.car{
+    margin: 0px;
+    position: absolute;
+    left: 100px
 }

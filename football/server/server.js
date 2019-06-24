@@ -25,82 +25,94 @@ db.once('open', () => {
 });
 const Schema = mongoose.Schema;
 const loginSchema = new Schema({
-    email:String,
+    email: String,
     password: String
 })
-const LoginModel = mongoose.model("login",loginSchema)
-var firestlogin = new LoginModel ({email:"belete",password:"1234"})
-firestlogin.save(function(err){
-    console.log('saved')
-})
+const LoginModel = mongoose.model("logins", loginSchema)
+var loginModelInstance = new LoginModel({ email: "belete", password: "1234" })
+// firestlogin.save(function (err) {
+//     console.log('saved')
+// })
 
 
 
 const OrderSchema = new Schema({
-    fullname:String,
+    fullname: String,
     adress: String,
     city: String,
     country: String,
     phone: String
 })
-const OrderModel = mongoose.model("order",OrderSchema)
+const OrderModel = mongoose.model("order", OrderSchema)
 
 const cardeSchema = new Schema({
-    nameoncarde:String,
+    nameoncarde: String,
     nemberoncarde: String,
     date: String,
-  
+
 })
-const CardeModel = mongoose.model("carde",cardeSchema)
+const CardeModel = mongoose.model("carde", cardeSchema)
 
 
-app.post("/login",(req,res)=>{
-const{email,password}=req.body;
-console.log(email,password, "obed")
-LoginModel.findOne({ email }, function (err, result) {
-    if(result == null){
-        res.send({failed:'user not found'})
-        console.log('user not found')
-    }
-    if(result != null){
-        if(result.password === password){
-            res.send({success:'logged'})
-            console.log(result)
+app.post("/login", (req, res) => {
+    const { email, password } = req.body;
+    console.log(email, password, "obed")
+    LoginModel.findOne({ email }, function (err, result) {
+        if (result == null) {
+            res.send({ failed: 'user not found' })
+            console.log('user not found')
         }
-    }
-    if(err){
-        console.error(err)
-    }
-});
+        if (result != null) {
+            if (result.password === password) {
+                res.send({ success: 'logged' })
+                console.log(result)
+            }
+        }
+        if (err) {
+            console.error(err)
+        }
+    });
 })
 
-app.post("/orderpage",(req,res)=>{
+app.post("/orderpage", (req, res) => {
     console.log(req.body.inputs)
-const{fullname,adress,city,countery,phonenumber}=req.body.inputs;
-var orderSave = new OrderModel ({fullname:fullname,adress:adress,city:city,country:countery,phone:phonenumber})
-orderSave.save(function(err){
-    if(err){
-        console.error(err)
-    }
-    res.send({success:true})
-    console.log('saved')
-})
+    const { fullname, adress, city, countery, phonenumber } = req.body.inputs;
+    var orderSave = new OrderModel({ fullname: fullname, adress: adress, city: city, country: countery, phone: phonenumber })
+    orderSave.save(function (err) {
+        if (err) {
+            console.error(err)
+        }
+        res.send({ success: true })
+        console.log('saved')
+    })
 
 
 })
-app.post("/cardpage",(req,res)=>{
+app.post("/cardpage", (req, res) => {
     console.log(req.body.inputs)
-const{nameoncarde,numbercarde,date}=req.body.inputs;
-var cardeSave = new  CardeModel ({nameoncarde:nameoncarde,numbercarde:numbercarde,date:date,})
-cardeSave.save(function(err){
-    if(err){
-        console.error(err)
-    }
-    res.send({success:true})
-    console.log('its good')
+    const { nameoncarde, numbercarde, date } = req.body.inputs;
+    var cardeSave = new CardeModel({ nameoncarde: nameoncarde, numbercarde: numbercarde, date: date, })
+    cardeSave.save(function (err) {
+        if (err) {
+            console.error(err)
+        }
+        res.send({ success: true })
+        console.log('its good')
+    })
+
+
 })
-
-
+app.post("/newlogin", (req, res) => {
+    console.log("im here!!!!!")
+    loginModelInstance = new LoginModel(req.body)
+    loginModelInstance.save(function (err) {
+        if (err) {
+            console.error(err)
+        }
+        console.log('new login save')
+        res.send({ success: true })
+       
+    })
 })
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))

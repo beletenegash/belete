@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './login.css'
+import { Link } from 'react-router-dom';
 
 
 
@@ -25,7 +26,7 @@ function Login(props) {
                 console.log('good logged')
                 props.history.push("/home")
             }
-            if(res.failed){
+            if (res.failed) {
                 console.log('not logged')
             }
 
@@ -36,11 +37,18 @@ function Login(props) {
     return (
 
         <div className="useres">
+        <h1>Sign-In </h1>
             <form className='usercss' onSubmit={kos}>
-                <input type="text" placeholder="email" onChange={(e) => setEmail(e.target.value)} /><br />
-                <input type="text" placeholder="password" onChange={(e) => setPassword(e.target.value)} /><br />
-                <input type="submit" value="login" /><br />
+                <input type="text" className="inpu" placeholder="email" onChange={(e) => setEmail(e.target.value)} /><br />
+                <input type="text" className="inpu" placeholder="password" onChange={(e) => setPassword(e.target.value)} /><br />
+                <input type="submit" value="login" className="inpu" /><br />
             </form>
+
+            <div className="inpus"> <Link to={`/Sing`}>
+                craet account
+    </Link></div>
+
+
         </div>
     )
 
