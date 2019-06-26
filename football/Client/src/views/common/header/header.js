@@ -19,7 +19,7 @@ function header(){
         </div >
         <div  className="click" >
           <Link to={`/home`}>
-           product
+         Home
               </Link>
 
         </div>
