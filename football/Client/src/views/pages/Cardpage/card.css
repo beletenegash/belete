@@ -1,9 +1,12 @@
 .card{
-  background: rgb(238, 237, 229);
+ 
     border-radius: 10px;
     text-align: center;
-    width: 500px;
+    width: 400px;
     height: 500px;
+    border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px;
 }
 .car{
     margin: 0px;
