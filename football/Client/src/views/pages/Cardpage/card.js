@@ -23,7 +23,7 @@ function Card(props){
             console.log(res)
             if (res.success) {
                 console.log('good logged')
-                props.history.push("/Home")
+                props.history.push("/cart")
             }
             if(res.failed){
                 console.log('not logged')

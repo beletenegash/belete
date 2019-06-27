@@ -6,6 +6,7 @@ import login from './pages/Loginpage/login';
 import Home from './pages/Homepage/home';
 import Card from './pages/Cardpage/card'
 import Sing from './pages/Singpage/sing'
+import Cart from './pages/cart/cart'
 
 
 import { BrowserRouter as Router, Route } from 'react-router-dom';
@@ -28,6 +29,8 @@ function App() {
           <Route exact={true} path='/Card' component={Card} /> 
           <Route exact={true} path='/home' component={Home} /> 
           <Route exact={true} path='/sing' component={Sing} /> 
+          <Route exact={true} path='/cart' component={Cart} /> 
+
           
           
         </div>  

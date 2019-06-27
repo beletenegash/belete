@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './order.css'
 
 function Order(props) {
+    const [count, setCount] = useState(0);
+
 
     const [inputs, setInput] = useState({})
 
@@ -23,7 +25,7 @@ function Order(props) {
         }).then(res => res.json().then(res => {
             console.log(res)
             if (res.success) {
-                console.log('good logged')
+               alert('to continue click here')
                 props.history.push("/Card")
             }
             if (res.failed) {
@@ -40,6 +42,7 @@ function Order(props) {
     return (
 
         <div>
+
             <form className="orders" onSubmit={orders}>
                 <h1 >Enter Your Adress</h1>
                 <p> <input type="text" className="orde" placeholder="fullname" onKeyUp={(e) => { setInput({ ...inputs, fullname: e.target.value }) }}></input>full Name</p>

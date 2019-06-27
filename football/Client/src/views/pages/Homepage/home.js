@@ -4,20 +4,21 @@ import {Link} from 'react-router-dom';
 import './home.css'
 
 function Home() {
-  // const [text, setText] = useState('');
-  //   let tempText = '';
+  const [count, setCount] = useState(0);
 
-  // useEffect(() => {
-   
  
-  // });
-
   return (
  
       
 
    
-    <div>
+    <div >
+      <div className="buyit1">
+         <p> quantity {count} times</p>
+      <button onClick={() => setCount(count + 1)}>
+      +
+      </button>
+      </div>
      
      <h1 className="buy"> buy now = 39.90 $</h1>
     <h2> shmerling to buy click on Buy now</h2>
@@ -39,6 +40,7 @@ printing and typesetting industry.
  the industry's standard dummy text 
  ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
  PageMaker including versions of Lorem Ipsum.</p>
+ 
     </div>
   )
 }
